@@ -15,8 +15,10 @@ public class FirstActivity extends AppCompatActivity {
         // Before this function, the screen is empty.
         setContentView(R.layout.activity_main);
 
+        // Specifies the page where you are, and then what page you want to go to
         Intent nextPage = new Intent(this, SecondActivity.class);
         Button secondButton = findViewById(R.id.buttonToSecond);
+        // Starting another activity
         secondButton.setOnClickListener( click -> startActivity( nextPage ));
 
     }
