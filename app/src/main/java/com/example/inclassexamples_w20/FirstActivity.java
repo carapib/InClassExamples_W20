@@ -19,7 +19,7 @@ public class FirstActivity extends AppCompatActivity {
         // Before this function, the screen is empty.
         setContentView(R.layout.activity_main);
 
-        // Week3, Page20
+        // Week3, Page20 - The String fileName specifies the name of the file, mode is the security permissions
         prefs = getSharedPreferences("FileName", Context.MODE_PRIVATE);
         String savedString = prefs.getString("ReserveName", "Enter something");
         EditText typeField = findViewById(R.id.inputText);
