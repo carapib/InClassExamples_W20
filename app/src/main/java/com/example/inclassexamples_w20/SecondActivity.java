@@ -15,11 +15,15 @@ public class SecondActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_second);
 
+        // Week3-Page9
+        // Retrieve the Intent object that caused the transition with the function getIntent()​
         Intent dataSent = getIntent();
         String nameSent = dataSent.getStringExtra("name");
+        // To get the values that were reserved under names
         int ageSent = dataSent.getIntExtra("age", 0);
         String typed = dataSent.getStringExtra("typed");
 
+        // Week3-Page7
         Button previousButton = findViewById(R.id.previousPageButton);
         previousButton.setOnClickListener(click -> {
             setResult( 123, dataSent);

@@ -21,10 +21,13 @@ public class FirstActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.inputText);
         Button secondButton = findViewById(R.id.buttonToSecond);
 
+        //Week3-Page6, Page8 Specifies the page where you are, and then what page you want to go to
         Intent nextPage = new Intent(this, SecondActivity.class);
             nextPage.putExtra("name", "Eric");
             nextPage.putExtra("age", 20);
             nextPage.putExtra("typed", editText.getText().toString());
+        // Starting another activity
+
         //Send the table to SecondActivity:
         secondButton.setOnClickListener( click -> startActivity( nextPage ));
 
@@ -32,6 +35,7 @@ public class FirstActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //
         super.onActivityResult(requestCode, resultCode, data);
 
 
