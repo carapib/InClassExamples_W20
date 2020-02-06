@@ -59,9 +59,12 @@ public class FirstActivity extends AppCompatActivity {
 
     private void saveSharedPrefs(String stringToSave)
     {
+        // Week 3, Page20 - SharedPreferences provides an interface for saving data to a file on your device.
         SharedPreferences prefs = getSharedPreferences("FileName", Context.MODE_PRIVATE);
+        // Week 3, Page 21 - From the sharedPreferences object, you must get the Editor object
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("TypedText", stringToSave);
+        // Week 3, Page 21 - You must call commit() when all your values have been set to save them to the file
         editor.commit();
     }
 }

@@ -20,6 +20,7 @@ public class PrebuiltIntentExamples extends AppCompatActivity {
             // Week3-Page15 Default Intent ACTION that opens the Email app that is currently responsible for ACTION_SEND
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
+            // Week3-Page 19 - You can put an entire bundle in an Intent to send to the next activity using the putExtra() functions
             intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"email@example.com"});
             intent.putExtra(Intent.EXTRA_SUBJECT, "subject here");
             intent.putExtra(Intent.EXTRA_TEXT, "body text");
@@ -32,7 +33,7 @@ public class PrebuiltIntentExamples extends AppCompatActivity {
         temp.setOnClickListener( click -> {
 
             String url = "http://www.algonquincollege.com";
-            // Week3-Page14 - You can use these to see what the default Activity on your phone for an Intent
+            // Week3-Page14, Page17 - You can use these to see what the default Activity on your phone for an Intent
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData( Uri.parse(url) );
             startActivity(i);
